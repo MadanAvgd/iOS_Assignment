@@ -28,7 +28,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                     })
                 })
                 errorAlert.addAction(action)
-                self.present(errorAlert, animated: true, completion: nil)
+                DispatchQueue.main.async {
+                    self.present(errorAlert, animated: true, completion: nil)
+                }
             }
             
             if let tune = tune{
